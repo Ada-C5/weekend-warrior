@@ -3,7 +3,7 @@ require 'minitest/pride'
 require 'minitest/autorun'
 require_relative 'hello_world'
 
-class HelloWorldTest < Minitest::Test
+class HelloWorldTest < Minitest::Test         #just do one test at a time!!!
   def test_no_name
     assert_equal 'Hello, World!', hello_world, <<-MSG
     When given no name, it should greet the world!
