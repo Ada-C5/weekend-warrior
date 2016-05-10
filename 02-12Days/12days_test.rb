@@ -3,10 +3,20 @@ require 'minitest/pride'
 require 'minitest/autorun'
 require_relative '12days'
 
-class TwelveDaysTest < Minitest::Test
+class Xmas
+  def self.gifts(days)
+    array
+
+
+
+  end
+
+end
+
+class TwelveDaysTest < Minitest::Test #Where is the module and class defined???
   def test_day_one_gift
     l = "a partridge in a pear tree"
-    g = Xmas.gifts(0).first
+    g = Xmas.gifts(0).first           #Can't find where Xmas class is defined wtffff??
     assert_equal l, g
   end
 
@@ -14,7 +24,7 @@ class TwelveDaysTest < Minitest::Test
     skip
     l1 = "two turtle doves"
     l2 = "and a partridge in a pear tree"
-    g1, g2 = Xmas.gifts(1)
+    g1, g2 = Xmas.gifts(1)    #this line is using parallel assignment
 
     assert_equal l1, g1
     assert_equal l2, g2
@@ -47,8 +57,8 @@ class TwelveDaysTest < Minitest::Test
     last_verse = <<-SONG
 On the twelfth day of Christmas my true love gave to me
 twelve drummers drumming
-eleven pipers piping
-ten lords-a-leaping
+eleven pipers piping                  #I want to edit this in order to return specific lines but can't edit tests.
+ten lords-a-leaping                   #Should I just copypasta? Seems like cheating. Am I overthinking??
 nine ladies dancing
 eight maids-a-milking
 seven swans-a-swimming
